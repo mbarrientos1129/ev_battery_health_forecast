@@ -12,6 +12,6 @@
 
 ##Setup
 ```bash 
-git clone <repo url>
+git clone https://github.com/mbarrientos1129/ev_battery_health_forecast
 cd ev_battery_health_forecast
 pip install -r requirements.txt
