@@ -16,7 +16,7 @@ git clone https://github.com/mbarrientos1129/ev_battery_health_forecast
 cd ev_battery_health_forecast
 pip install -r requirements.txt
 ```
-##Step 2: Data Ingestion & Cleaning
+## Step 2: Data Ingestion & Cleaning
 We take our raw EV metrics file (`data/raw/ev_metrics.csv`) and turn it into an analysis-ready table:
 
 1. **Load the CSV**  
