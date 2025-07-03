@@ -96,6 +96,8 @@ We’ll turn our engineered features into sequences, train an LSTM model to fore
    - Train for N epochs, record average MSE loss per epoch.  
    - Plot training loss vs. epoch to check convergence.
 
+   ![Alt text](assets/traning_loss_curve.png)
+
 4. **Test Evaluation**  
    - Predict on the test set.  
    - Plot actual vs. predicted SOH.  
@@ -103,5 +105,7 @@ We’ll turn our engineered features into sequences, train an LSTM model to fore
 
 5. **Save the Model**  
    - Serialize the trained weights to 'models/soh_forecaster.pt' using 'torch.save()'.
+
+    ![Alt text](assets/pred_plot.png)
 
 Full code examples live in 'src/modeling.py' and 'notebooks/02-modeling.ipynb'.
