@@ -77,3 +77,31 @@ In this phase, we dive into the cleaned data to understand its structure and cra
    - **temp_bin**: bucketized ambient temperatures (e.g. 'pd.cut()' into ranges)
 
 You can see the full code and outputs in the [01-exploration.ipynb](notebooks/01-exploration.ipynb) notebook.
+
+## Step 4: Modeling & Evaluation with PyTorch
+
+We’ll turn our engineered features into sequences, train an LSTM model to forecast SOH, and evaluate its performance.
+
+1. **DataLoader Prep**  
+   - Convert 'df' into sliding windows of length 'seq_len' (e.g. 24).  
+   - Split into train/test (80/20).  
+   - Wrap in 'TensorDataset' & 'DataLoader' for batching.
+
+2. **Model Definition**  
+   - In 'src/modeling.py', define 'SoHForecaster(nn.Module)' with an LSTM and a final 'Linear' layer.  
+   - Add a 'train_model()' utility that runs epochs and returns the trained model.
+
+3. **Training & Loss Curve**  
+   - Instantiate the model in your notebook.  
+   - Train for N epochs, record average MSE loss per epoch.  
+   - Plot training loss vs. epoch to check convergence.
+
+4. **Test Evaluation**  
+   - Predict on the test set.  
+   - Plot actual vs. predicted SOH.  
+   - Compute MAE or RMSE for a numeric performance metric.
+
+5. **Save the Model**  
+   - Serialize the trained weights to 'models/soh_forecaster.pt' using 'torch.save()'.
+
+Full code examples live in 'src/modeling.py' and 'notebooks/02-modeling.ipynb'.
