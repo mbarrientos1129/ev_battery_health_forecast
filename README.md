@@ -106,6 +106,6 @@ We’ll turn our engineered features into sequences, train an LSTM model to fore
 5. **Save the Model**  
    - Serialize the trained weights to 'models/soh_forecaster.pt' using 'torch.save()'.
 
-    ![Alt text](assets/pred_plot.png)
+   ![Alt text](assets/pred_plot.png)
 
 Full code examples live in 'src/modeling.py' and 'notebooks/02-modeling.ipynb'.
